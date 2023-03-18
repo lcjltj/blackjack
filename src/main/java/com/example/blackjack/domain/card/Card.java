@@ -1,4 +1,4 @@
-package com.example.blackjack.domain;
+package com.example.blackjack.domain.card;
 
 import java.util.Objects;
 
@@ -9,6 +9,14 @@ public class Card {
     public Card(final Pattern pattern, final Number number) {
         this.pattern = pattern;
         this.number = number;
+    }
+
+    public boolean equalsAce() {
+        return Number.ACE.equals(this.number);
+    }
+
+    public Number getNumber() {
+        return number;
     }
 
     @Override
